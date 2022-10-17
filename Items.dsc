@@ -107,3 +107,30 @@ HC_Rock_Salt:
     display name: <reset><&color[#A27C7C]>Rock Salt
     lore:
         - <reset><gray>Crystallized salt from the ancient sea commonly used to season meals.<n><reset><gray>Cannot be eaten in this form.
+
+#Tools and Weapons
+HC_Archaeology_Brush:
+    type: item
+    debug: false
+    material: feather
+    flags:
+        BrushPercentage: 20
+    data:
+        discover: false
+    mechanisms:
+        custom_model_data: 4
+    display name: <reset><&color[#A8A8A8]>Brush
+    lore:
+        - <reset><dark_gray>Right click certain blocks to brush.
+#Misc. Items
+HC_Fossil:
+    type: item
+    debug: false
+    material: raw_gold
+    data:
+        discover: false
+    mechanisms:
+        custom_model_data: 4
+    display name: <reset><&color[#D5B97B]>Fossil
+    lore:
+        - <reset><&6>A relic from the past.
