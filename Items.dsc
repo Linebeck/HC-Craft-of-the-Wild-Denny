@@ -7,6 +7,8 @@ HC_cooking_pot_demo:
         discover: false
     display name: <reset>Cooking Pot <red>DEMO
 
+
+
 #UI & Models
 HC_menu_gray:
     type: item
@@ -48,6 +50,9 @@ HC_menu_cooking_pot_model:
         discover: false
     display name: <reset><bold><red>NULL REPORT TO MOD
 
+
+
+
 #Workstations
 HC_cooking_pot:
     type: item
@@ -67,6 +72,9 @@ HC_cooking_pot:
             - air|potion[potion_effects=[type=WATER;upgraded=false;extended=false]]|air
             - iron_ingot|cauldron|iron_ingot
             - iron_ingot|stick|iron_ingot
+
+
+
 #Food
 HC_slightly_baked_apple:
     type: item
@@ -108,20 +116,55 @@ HC_Rock_Salt:
     lore:
         - <reset><gray>Crystallized salt from the ancient sea commonly used to season meals.<n><reset><gray>Cannot be eaten in this form.
 
+
+
+
 #Tools and Weapons
-HC_Archaeology_Brush:
+HC_Archaeology_Brush_Basic:
     type: item
     debug: false
     material: feather
     flags:
-        BrushPercentage: 20
+        BrushPercentage: <[ItemModifier1].if_null[20]>
+        BrushPercentageMod: <[ItemModifier2].if_null[1]>
+        UUID: <util.random_uuid>
+        Owner: <player.name.if_null[NULL]>
     data:
         discover: false
+        Skills:
+            Required: 0
+            Archaeology: 1
+            Crafting: 1
     mechanisms:
         custom_model_data: 4
     display name: <reset><&color[#A8A8A8]>Brush
     lore:
         - <reset><dark_gray>Right click certain blocks to brush.
+    recipes:
+        1:
+            type: shaped
+            input:
+            - air|air|air
+            - air|feather|air
+            - air|stick|air
+
+
+#Parts
+HC_part_handle_basic:
+    type: item
+    debug: false
+    material: stick
+    mechanisms:
+        custom_model_data: 5
+    flags:
+        UUID: <util.random_decimal>
+    data:
+        discover: true
+    display name: <reset>Basic handle
+
+
+
+
 #Misc. Items
 HC_Fossil:
     type: item
