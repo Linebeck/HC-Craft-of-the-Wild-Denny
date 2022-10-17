@@ -8,10 +8,10 @@ archaeologybrush_script:
             - define BP <context.location.block.flag[BrushedProgress].if_null[0]>
             - if <script[archaeology_data].data_key[<[block]>].exists>:
                 - flag <context.location.block> BrushedProgress:<[BP].add[1]> expire:1d
-                - playeffect effect:red_dust special_data:1|<&color[#CCCCCC]> at:<context.location.center> offset:0.4 quantity:50
+                - playeffect effect:red_dust special_data:1|<&color[#CCCCCC]> at:<context.location.center> offset:0.4 quantity:4
                 - if <[BP]> >= 4:
                     - modifyblock <context.location> air
-                    - playeffect effect:block_crack quantity:20 offset:0.3 at:<context.location.center> special_data:<[block]>
+                    - playeffect effect:block_crack quantity:50 offset:0.3 at:<context.location.center> special_data:<[block]>
                     - playsound <context.location> sound:block_grass_step volume:.80 pitch:0.60
                     - wait 1t
                     - if <util.random_chance[<player.item_in_hand.flag[BrushPercentage]>]>:
