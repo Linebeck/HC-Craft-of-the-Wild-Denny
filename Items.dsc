@@ -119,7 +119,18 @@ HC_Archaeology_Brush:
         discover: false
     mechanisms:
         custom_model_data: 4
-    display name: <reset><&color[#A8A8A8]> Brush
+    display name: <reset><&color[#A8A8A8]>Brush
     lore:
         - <reset><dark_gray>Right click certain blocks to brush.
-#Armor
+#Misc. Items
+HC_Fossil:
+    type: item
+    debug: false
+    material: raw_gold
+    data:
+        discover: false
+    mechanisms:
+        custom_model_data: 4
+    display name: <reset><&color[#D5B97B]>Fossil
+    lore:
+        - <reset><&6>A relic from the past.

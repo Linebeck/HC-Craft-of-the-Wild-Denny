@@ -15,19 +15,19 @@ archaeologybrush_script:
                     - playsound <context.location> sound:block_grass_step volume:.80 pitch:0.60
                     - wait 1t
                     - if <util.random_chance[<player.item_in_hand.flag[BrushPercentage]>]>:
-                        - if <util.random_chance[0.01]>:
+                        - if <util.random_chance[0.05]>:
                             - drop <context.location> <script[archaeology_data].data_key[<[block]>.legendary].random.if_null[air]> speed:0
                             - stop
-                        - if <util.random_chance[1]>:
+                        - if <util.random_chance[5]>:
                             - drop <context.location> <script[archaeology_data].data_key[<[block]>.ultrarare].random.if_null[air]> speed:0
                             - stop
-                        - if <util.random_chance[5]>:
+                        - if <util.random_chance[10]>:
                             - drop <context.location> <script[archaeology_data].data_key[<[block]>.veryrare].random.if_null[air]> speed:0
                             - stop
-                        - if <util.random_chance[15]>:
+                        - if <util.random_chance[20]>:
                             - drop <context.location> <script[archaeology_data].data_key[<[block]>.rare].random.if_null[air]> speed:0
                             - stop
-                        - if <util.random_chance[30]>:
+                        - if <util.random_chance[40]>:
                             - drop <context.location> <script[archaeology_data].data_key[<[block]>.uncommon].random.if_null[air]> speed:0
                             - stop
                         - if <util.random_chance[100]>:
@@ -37,52 +37,82 @@ archaeologybrush_script:
 archaeology_data:
     type: data
     dirt:
-        color:
-        - #834510
         common:
         - clay_ball
         - wheat_seeds
+        - sugarcane
+        - beetroot seed
+        - hc_fossil
         uncommon:
         - bone
         rare:
         - pumpkin_seeds
+        veryrare:
+        - potato
+        ultrarare:
+        - gunpowder
+        legendary:
+        - creeper_spawn_egg
+        - pig_spawn_egg
     gravel:
-        color: #CCCCCC
         common:
-        - clay
+        - clay_ball
         - bone
         - wheat_seeds
-        uncommon:
         - flint
-        - coal
-        rare:
-        - iron_nugget
-    sand:
-        color: #FEFB92
-        common:
-        - bone
         uncommon:
-        - melon_seeds
+        - string
+        - coal
+        
         rare:
         - iron_nugget
         veryrare:
-        - gold_nugget
+        - raw_iron
+        - experience_bottle
+        - hc_fossil
         ultrarare:
-        - skeleton_skull
-    soul_sand:
-        color: #5D350B
+        - emerald
+        legendary:
+        - silverfish_spawn_egg
+        - spider_spawn_egg
+    sand:
         common:
         - bone
+        - cactus
+        - hc_fossil
         uncommon:
+        - melon_seeds
+        - scute
+        - dried_kelp
+        rare:
+        - iron_nugget
+        - nautilus
+        veryrare:
+        - gold_nugget
+        ultrarare:
+        - diamond
+        - skeleton_skull
+        legendary:
+        - turtle_egg
+
+    soul_sand:
+        common:
+        - bone
         - flint
         - gold_nugget
+        uncommon:
+        - soul_lantern
+        - hc_fossil
         rare:
         - nether_wart
         - magma_cream
         - ghast_tear
+        - gold_ingot
         very rare:
         - wither_rose
+        - golden_sword
         ultrarare:
         - wither_skeleton_skull
         legendary:
-        - ancient_debris
+        - netherite_scrap
+        - piglin_spawn_egg
