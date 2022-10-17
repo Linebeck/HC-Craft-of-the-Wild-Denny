@@ -18,10 +18,10 @@ archaeologybrush_script:
                         - if <util.random_chance[0.05]>:
                             - drop <context.location> <script[archaeology_data].data_key[<[block]>.legendary].random.if_null[air]> speed:0
                             - stop
-                        - if <util.random_chance[5]>:
+                        - if <util.random_chance[2.5]>:
                             - drop <context.location> <script[archaeology_data].data_key[<[block]>.ultrarare].random.if_null[air]> speed:0
                             - stop
-                        - if <util.random_chance[10]>:
+                        - if <util.random_chance[7]>:
                             - drop <context.location> <script[archaeology_data].data_key[<[block]>.veryrare].random.if_null[air]> speed:0
                             - stop
                         - if <util.random_chance[20]>:
