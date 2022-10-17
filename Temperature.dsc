@@ -2,6 +2,8 @@ HC_biome_temp:
     type: world
     debug: false
     events:
+        on player right clicks block with:carrot_on_a_stick:
+            - determine passively cancelled
         on system time secondly:
             - foreach <server.online_players>:
                 - define player <[value]>
@@ -23,3 +25,5 @@ HC_biome_temp:
                 - if <[player].has_flag[DebugTemperature]>:
                     - ratelimit <[player]> 2s
                     - narrate "Biome temp: <[player].location.biome.temperature> Calulated temp: <[temp]> <definition[TempFriendly].if_null[Normal]>" targets:<[player]>
+
+
