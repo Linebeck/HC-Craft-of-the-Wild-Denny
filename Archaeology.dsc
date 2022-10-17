@@ -12,7 +12,7 @@ archaeologybrush_script:
                 - if <[BP]> >= 4:
                     - modifyblock <context.location> air
                     - playeffect effect:block_crack quantity:20 offset:0.3 at:<context.location.center> special_data:<[block]>
-                    - playsound <context.location> sound:block_grass_step volume:1 pitch:0.75
+                    - playsound <context.location> sound:block_grass_step volume:.80 pitch:0.60
                     - wait 1t
                     - if <util.random_chance[<player.item_in_hand.flag[BrushPercentage]>]>:
                         - if <util.random_chance[0.01]>:
