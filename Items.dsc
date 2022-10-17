@@ -114,7 +114,7 @@ HC_Archaeology_Brush:
     debug: false
     material: feather
     flags:
-        BrushPercentage: 100
+        BrushPercentage: 20
     data:
         discover: false
     mechanisms:

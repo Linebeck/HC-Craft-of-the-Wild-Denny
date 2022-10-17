@@ -42,13 +42,14 @@ archaeology_data:
         - wheat_seeds
         - sugarcane
         - beetroot seed
-        - hc_fossil
+        
         uncommon:
         - bone
         rare:
         - pumpkin_seeds
         veryrare:
         - potato
+        - hc_fossil
         ultrarare:
         - gunpowder
         legendary:
@@ -63,13 +64,13 @@ archaeology_data:
         uncommon:
         - string
         - coal
-        
         rare:
         - iron_nugget
+        - hc_fossil
         veryrare:
         - raw_iron
         - experience_bottle
-        - hc_fossil
+        
         ultrarare:
         - emerald
         legendary:
