@@ -14,7 +14,6 @@ archaeologybrush_script:
                     - playeffect effect:block_crack quantity:20 offset:0.3 at:<context.location.center> special_data:<[block]>
                     - wait 1t
                     - if <util.random_chance[<player.item_in_hand.flag[BrushPercentage]>]>:
-                        - narrate balls
                         - if <util.random_chance[0.01]>:
                             - drop <context.location> <script[archaeology_data].data_key[<[block]>.legendary].random.if_null[air]> speed:0
                             - stop
@@ -44,6 +43,8 @@ archaeology_data:
         - wheat_seeds
         uncommon:
         - bone
+        rare:
+        - pumpkin_seeds
     gravel:
         color: #CCCCCC
         common:
