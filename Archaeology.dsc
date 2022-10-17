@@ -8,7 +8,7 @@ archaeologybrush_script:
             - define BP <context.location.block.flag[BrushedProgress].if_null[0]>
             - if <script[archaeology_data].data_key[<[block]>].exists>:
                 - flag <context.location.block> BrushedProgress:<[BP].add[1]> expire:1d
-                - playeffect effect:red_dust special_data:1|<&color[#CCCCCC]> at:<context.location.center> offset:0.4 quantity:20
+                - playeffect effect:red_dust special_data:1|<&color[#CCCCCC]> at:<context.location.center> offset:0.4 quantity:50
                 - if <[BP]> >= 4:
                     - modifyblock <context.location> air
                     - playeffect effect:block_crack quantity:20 offset:0.3 at:<context.location.center> special_data:<[block]>
