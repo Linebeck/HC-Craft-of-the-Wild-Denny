@@ -177,3 +177,24 @@ HC_Fossil:
     display name: <reset><&color[#D5B97B]>Fossil
     lore:
         - <reset><&6>A relic from the past.
+HC_Geode:
+    type: item
+    debug: false
+    material: flower_pot
+    data:
+        discover: false
+    mechanisms:
+        custom_model_data: 2
+    display name: <reset><&color[#9C662F]>Geode
+    lore:
+    - <reset><&6>Crack one open!
+
+HC_Diamond_Shard:
+    type: item
+    debug: false
+    material: diamond
+    data:
+        discover: false
+    mechanisms:
+        custom_model_data: 2
+    display name: <reset>Diamond Shard
