@@ -8,6 +8,6 @@ ItemCraftSkillEnforcement:
             - if <context.item.script.is_truthy> and <[RequiredItemSkills].is_truthy>:
                 - narrate <[RequiredItemSkills]>
                 - foreach <[RequiredItemSkills].exclude[Required]>:
-                    - if <[value]> < <[Skills].get[<definition[key].get[1]>].if_null[]>:
+                    - if <[value]> < <[Skills].get[<definition[key]>].get[lvl]>:
                         - narrate fail
                 - determine cancelled
