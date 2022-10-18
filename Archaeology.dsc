@@ -127,3 +127,12 @@ archaeology_data:
         legendary:
         - netherite_scrap
         - piglin_spawn_egg
+
+HC_Geode_script:
+    type: world
+    debug: false
+    events:
+        on player right clicks blockk with:HC_Geode:
+            - ratelimit <player> 2t
+            - if <player.item_in_hand> == HC_Geode:
+                - narrate hello
