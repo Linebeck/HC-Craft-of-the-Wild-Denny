@@ -132,7 +132,23 @@ HC_Geode_script:
     type: world
     debug: false
     events:
-        on player right clicks blockk with:HC_Geode:
+        on player right clicks block with:HC_Geode:
             - ratelimit <player> 2t
-            - if <player.item_in_hand> == HC_Geode:
-                - narrate hello
+            - narrate hello
+            - give <context.player> <script[geode_data].data_key[<[itemname]>.common].random.if_null[air]>
+
+geode_data:
+    type: data
+    HC_Geode:
+        common:
+        - flint
+        - iron_nugget
+        - gold_nugget
+        - coal
+        - HC_Fossil
+        uncommon:
+        - amethyst_shard
+        - raw_copper
+        rare:
+        - raw_iron
+        - raw_gold

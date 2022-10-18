@@ -180,7 +180,7 @@ HC_Fossil:
 HC_Geode:
     type: item
     debug: false
-    material: flower_pot
+    material: brown_dye
     data:
         discover: false
     mechanisms:
