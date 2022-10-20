@@ -133,8 +133,9 @@ HC_Archaeology_Brush_Basic:
         discover: false
         Skills:
             Required: 0
-            Archaeology: 1
+            Archaeology: 2
             Crafting: 1
+            Xp: 7
     mechanisms:
         custom_model_data: 4
     display name: <reset><&color[#A8A8A8]>Brush
@@ -144,9 +145,29 @@ HC_Archaeology_Brush_Basic:
         1:
             type: shaped
             input:
-            - air|air|air
-            - air|feather|air
-            - air|stick|air
+            - air|air|stick
+            - air|HC_part_brush_basic|air
+            - air|HC_part_handle_basic|air
+
+
+HC_Archaeology_Hammer_basic:
+    type: item
+    debug: false
+    material: stick
+    mechanisms:
+        custom_model_data: 6
+    flags:
+        UUID: <util.random_decimal>
+    data:
+        discover: true
+    display name: <reset>Hammer
+    recipes:
+        1:
+            type: shaped
+            input:
+            - air|iron_ingot|string
+            - air|stick|iron_ingot
+            - stick|air|air
 
 
 #Parts
@@ -161,7 +182,33 @@ HC_part_handle_basic:
     data:
         discover: true
     display name: <reset>Basic handle
+    recipes:
+        1:
+            type: shaped
+            input:
+            - air|stick|stick
+            - stick|stick|stick
+            - stick|stick|air
 
+
+HC_part_brush_basic:
+    type: item
+    debug: false
+    material: stick
+    mechanisms:
+        custom_model_data: 5
+    flags:
+        UUID: <util.random_decimal>
+    data:
+        discover: true
+    display name: <reset>Brush
+    recipes:
+        1:
+            type: shaped
+            input:
+            - air|feather|air
+            - feather|stick|feather
+            - string|string|string
 
 
 
@@ -177,6 +224,7 @@ HC_Fossil:
     display name: <reset><&color[#D5B97B]>Fossil
     lore:
         - <reset><&6>A relic from the past.
+
 HC_Geode:
     type: item
     debug: false

@@ -132,10 +132,11 @@ HC_Geode_script:
     type: world
     debug: false
     events:
-        on player right clicks block with:HC_Geode:
-            - ratelimit <player> 2t
-            - narrate hello
-            - give <context.player> <script[geode_data].data_key[<[itemname]>.common].random.if_null[air]>
+        on player right clicks block:
+            - if <player.item_in_offhand.script.name> == HC_Archaeology_Hammer* and <player.item_in_hand.script.name> == HC_Geode* or <player.item_in_hand.script.name> == HC_Archaeology_Hammer* and <player.item_in_offhand.script.name> == HC_Geode*:
+                - ratelimit <player> 2t
+                - narrate hello
+                - drop <player.location.forward[0.5]> <script[geode_data].data_key[<player.item_in_hand.script.name>.common].random.if_null[air]>
 
 geode_data:
     type: data
