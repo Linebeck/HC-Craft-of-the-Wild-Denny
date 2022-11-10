@@ -1,10 +1,11 @@
 HC_subrace_vampire_script:
     type: world
     debug: false
+    enabled: false
     events:
         on system time secondly:
         #Vampire check
-            - foreach <server.online_players.parse[name]>:
+            - foreach <server.online_players>:
                 - if <player[<[value]>].flag[subrace].if_null[null].contains_text[vampire]> and <player[<[value]>].gamemode> == SURVIVAL and <player[<[value]>].world.name> != c1:
                     # Burn check
                     - if <player[<[value]>].location.above.light.sky> == 15 and <player[<[value]>].world.time.period> == day and <player[<[value]>].effects_data.contains_text[FIRE_RESISTANCE]> != true:
