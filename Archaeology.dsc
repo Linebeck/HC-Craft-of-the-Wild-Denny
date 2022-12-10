@@ -135,7 +135,7 @@ HC_Geode_script:
         on player right clicks block:
             - ratelimit <player> 2t
             - narrate hello
-            - drop <player.location.forward[0.5]> <script[geode_data].data_key[<player.item_in_hand.script.name>.common].random.if_null[air]> quantity:3
+            - drop <player.location.forward[0.5]> <script[geode_data].data_key[<player.item_in_hand.script.name>.common].random.if_null[air]> quantity:1
             - take <context.player> item:HC_Geode quantity:1
 
 geode_data:
@@ -147,6 +147,7 @@ geode_data:
         - gold_nugget
         - coal
         - HC_Fossil
+        - air
         uncommon:
         - amethyst_shard
         - raw_copper
