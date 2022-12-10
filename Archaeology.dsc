@@ -136,7 +136,7 @@ HC_Geode_script:
             - if <player.item_in_offhand.script.name> == HC_Archaeology_Hammer* and <player.item_in_hand.script.name> == HC_Geode* or <player.item_in_hand.script.name> == HC_Archaeology_Hammer* and <player.item_in_offhand.script.name> == HC_Geode*:
                 - ratelimit <player> 2t
                 - narrate hello
-                - drop <player.location.forward[0.5]> <script[geode_data].data_key[<player.item_in_hand.script.name>.common].random.if_null[air]>
+                - drop <player.location.forward[0.5]> <script[geode_data].data_key[<player.item_in_hand.script.name>.common].random.if_null[air]> quantity:3 
 
 geode_data:
     type: data
