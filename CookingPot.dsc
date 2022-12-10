@@ -12,25 +12,23 @@ HC_cooking_pot_script:
     type: world
     debug: false
     events:
-        on block drops HC_cooking_pot_model from breaking:
-            - determine passively cancelled
+        on player breaks campfire:
+            - if <context.location.block.campfire_items.contains_all_text[HC_menu_cooking_pot_model]>:
+                - determine HC_cooking_pot|charcoal[quantity=<util.random.decimal[1].to[3]>]
         on campfire cooks item into item:
-            - if <context.location.block.has_flag[cooking_pot]>:
+            - if <context.location.block.campfire_items.contains_all_text[HC_menu_cooking_pot_model]>:
                 - determine cancelled
         on player places campfire:
             - if <player.item_in_hand.script.name.if_null[<player.item_in_hand.material.name>]> == HC_cooking_pot_demo:
-                - flag <context.location.block> cooking_pot
-        on player breaks campfire:
-            - if <context.location.block.has_flag[cooking_pot]>:
                 - flag <context.location.block> cooking_pot
         on player right clicks campfire:
             - if <player.item_in_hand.script.name.if_null[null]> == HC_cooking_pot:
                 - adjust <context.location> campfire_items:HC_menu_cooking_pot_model
                 - if <player.gamemode> != creative:
                     - take iteminhand quantity:1
-                - flag <context.location.block> cooking_pot:<player>
                 - stop
-            - if <context.location.block.has_flag[cooking_pot]> and <context.location.campfire_items.get[1].script.name> == HC_menu_cooking_pot_model and <context.location.switched>:
+            - if <context.location.block.campfire_items.contains_all_text[HC_menu_cooking_pot_model]> and <context.location.switched>:
+                - determine passively cancelled
                 - inventory open d:HC_cooking_pot_menu
                 - flag <player> openmenulocation:<context.location>
         on player clicks item in HC_cooking_pot_menu:
@@ -62,6 +60,7 @@ HC_cooking_pot_script:
 
 HC_cooking_pot_script_cooking_logic:
     type: task
+    debug: false
     definitions: list|location|type
     script:
             - if <script[HC_cooking_masterlist].data_key[<[list]>].exists>:
@@ -70,7 +69,7 @@ HC_cooking_pot_script_cooking_logic:
                 - playsound custom sound:hyrulecore.music.effects.botw_cooking_success <player.location>
                 - wait 5s
                 - playeffect effect:ELECTRIC_SPARK at:<[location]> visibility:10 quantity:100
-                - drop <script[HC_cooking_masterlist].data_key[<[list]>]> <[location]>
+                - drop <script[HC_cooking_masterlist].data_key[<[list]>].after[@].as[list]> <[location]>
             - else:
                 - if <[list].if_null[NULL]> == NULL:
                     - stop

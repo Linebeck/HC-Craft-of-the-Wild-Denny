@@ -186,7 +186,7 @@ HC_part_handle_basic:
         1:
             type: shaped
             input:
-            - air|stick|stick
+            - air|stick|air
             - stick|stick|stick
             - stick|stick|air
 
