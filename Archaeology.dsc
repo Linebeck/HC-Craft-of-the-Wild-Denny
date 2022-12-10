@@ -136,7 +136,7 @@ HC_Geode_script:
             - ratelimit <player> 2t
             - narrate hello
             - drop <player.location.forward[0.5]> <script[geode_data].data_key[<player.item_in_hand.script.name>.common].random.if_null[air]> quantity:3
-            - take <context.player> item:HC_Geode
+            - take <context.player> item:HC_Geode quantity:1
 
 geode_data:
     type: data
