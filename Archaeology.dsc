@@ -135,7 +135,7 @@ HC_Geode_script:
         on player right clicks block with:HC_Geode:
 
             - if <util.random_chance[100]>:
-                            - give <context.location.center> <script[geode_data].data_key[common].random.if_null[air]> speed:0
+                            - give <context.player> <script[geode_data].data_key[common].random.if_null[air]> speed:0
                             - stop
 
             - ratelimit <player> 2t
