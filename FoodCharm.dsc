@@ -17,4 +17,7 @@ FoodCharmScript:
         on player consumes item:
             - foreach <server.online_players> as:player:
                 - if <[player].inventory.contains_item[HC_FoodCharm]>:
-                    - give <context.player> <context.item> quantity:1
+                    - if <util.random_chance[30]>:
+                        - give <context.player> <context.item> quantity:1
+                    - else:
+                        - stop
