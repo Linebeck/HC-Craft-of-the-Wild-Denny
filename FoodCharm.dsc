@@ -15,4 +15,5 @@ FoodCharmScript:
     debug: false
     events:
         on player consumes item:
-            - narrate <context.item>
+            - if <player.inventory.contains_item[HC_ItemMagnet]>:
+                - narrate <context.item>
