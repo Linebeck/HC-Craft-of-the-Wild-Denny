@@ -137,6 +137,10 @@ HC_Geode_script:
             - drop <player.location.forward[0.5]> <script[geode_data].data_key[<player.item_in_hand.script.name>.drops].random.if_null[air]> quantity:1
             - take item:HC_Geode quantity:1
             - playsound <context.location> sound:BLOCK_POINTED_DRIPSTONE_LAND pitch:2 volume:.75
+            - if <context.block> == air:
+                - playsound <context.location> sound:BLOCK_POINTED_DRIPSTONE_LAND pitch:2 volume:.75
+            - else:
+                - stop
 
 geode_data:
     type: data
