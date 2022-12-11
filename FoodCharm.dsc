@@ -15,5 +15,6 @@ FoodCharmScript:
     debug: false
     events:
         on player consumes item:
-            - if <player.inventory.contains_item[HC_ItemMagnet]>:
-                - narrate <context.item>
+            - foreach <server.online_players> as:player:
+                - if <[player].inventory.contains_item[HC_FoodCharm]>:
+                    - narrate <context.item>
