@@ -139,12 +139,12 @@ HC_Geode_script:
     debug: false
     events:
         on player breaks stone:
-            - if <util.random_chance[.1]>:
-                - drop HC_Geode
+            - if <util.random_chance[100]>:
+                - drop HC_Geode <context.block>
             - else:
                 - stop
         on player right clicks block with:HC_Geode:
-            - drop xp
+            - drop xp quantity: 2
             - if <util.random_chance[.1]>:
                 - give <context.player> <script[geode_data].data_key[legendary].random.if_null[air]> speed:0
                 - stop
