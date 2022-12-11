@@ -138,20 +138,19 @@ HC_Geode_script:
                 - stop
 geode_data:
     type: data
-    HC_Geode:
-        common:
-        - flint
-        - iron_nugget
-        - gold_nugget
-        - coal
-        - air
-        - amethyst_shard
-        - raw_copper
-        - raw_iron
-        - raw_gold
-        - HC_Fossil
-        - air
-        - experience_bottle
-        - name_tag
-        - air
-        - air
+    common:
+    - flint
+    - iron_nugget
+    - gold_nugget
+    - coal
+    - air
+    - amethyst_shard
+    - raw_copper
+    - raw_iron
+    - raw_gold
+    - HC_Fossil
+    - air
+    - experience_bottle
+    - name_tag
+    - air
+    - air
