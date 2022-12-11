@@ -123,7 +123,7 @@ HC_Rock_Salt:
 HC_Archaeology_Brush_Basic:
     type: item
     debug: false
-    material: feather
+    material: stick
     flags:
         BrushPercentage: <[ItemModifier1].if_null[20]>
         BrushPercentageMod: <[ItemModifier2].if_null[1]>
@@ -228,7 +228,7 @@ HC_Fossil:
 HC_Geode:
     type: item
     debug: false
-    material: brown_dye
+    material: gray_dye
     data:
         discover: false
     mechanisms:
@@ -240,7 +240,7 @@ HC_Geode:
 HC_Diamond_Shard:
     type: item
     debug: false
-    material: diamond
+    material: iron_nugget
     data:
         discover: false
     mechanisms:
