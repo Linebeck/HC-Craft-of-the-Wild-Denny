@@ -104,6 +104,16 @@ HC_Monster_Extract:
     lore:
         - <reset><&color[#738FA7]>This suspicious spice can be used<n><reset><&color[#738FA7]>to make a number of monstrous meals
 
+HC_Carrot_Cake:
+    type: item
+    debug: false
+    material: carrot
+    data:
+        discover: false
+    mechanisms:
+        custom_model_data: 2
+    display name: <reset><&color[#ed9121]>Carrot Cake
+
 HC_Rock_Salt:
     type: item
     debug: false
