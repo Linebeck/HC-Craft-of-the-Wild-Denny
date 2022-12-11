@@ -17,4 +17,4 @@ FoodCharmScript:
         on player consumes item:
             - foreach <server.online_players> as:player:
                 - if <[player].inventory.contains_item[HC_FoodCharm]>:
-                    - narrate <context.item>
+                    - give <context.player> <context.item>
