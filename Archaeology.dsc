@@ -138,7 +138,7 @@ HC_Geode_script:
             - take item:HC_Geode quantity:1
             - playsound at:<player.location> sound:BLOCK_POINTED_DRIPSTONE_LAND pitch:2 volume:.5
             - drop <context.player> <script[geode_data].data_key[<player.item_in_hand.script.name>.drops].random.if_null[air]> quantity:1
-            
+
 geode_data:
     type: data
     HC_Geode:
@@ -156,6 +156,5 @@ geode_data:
         - air
         - experience_bottle
         - name_tag
-        - air
         - air
         - air
