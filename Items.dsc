@@ -123,7 +123,7 @@ HC_Rock_Salt:
 HC_Archaeology_Brush_Basic:
     type: item
     debug: false
-    material: stick
+    material: feather
     flags:
         BrushPercentage: <[ItemModifier1].if_null[20]>
         BrushPercentageMod: <[ItemModifier2].if_null[1]>
