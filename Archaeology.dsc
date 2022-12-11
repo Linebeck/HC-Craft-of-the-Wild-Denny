@@ -139,7 +139,22 @@ HC_Geode_script:
     debug: false
     events:
         on player breaks stone:
-            - if <util.random_chance[100]>:
+            - if <util.random_chance[1]>:
+                - determine HC_Geode
+            - else:
+                - stop
+        on player breaks tuff:
+            - if <util.random_chance[20]>:
+                - determine HC_Geode
+            - else:
+                - stop
+        on player breaks deepslate:
+            - if <util.random_chance[.5]>:
+                - determine HC_Geode
+            - else:
+                - stop
+        on player breaks basalt:
+            - if <util.random_chance[1]>:
                 - determine HC_Geode
             - else:
                 - stop
