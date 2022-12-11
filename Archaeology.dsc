@@ -134,22 +134,20 @@ HC_Geode_script:
     events:
         on player right clicks block:
             - ratelimit <player> 2t
-            - drop <player.location.forward[0.5]> <script[geode_data].data_key[<player.item_in_hand.script.name>.common].random.if_null[air]> quantity:1
-            - take <context.player> item:HC_Geode quantity:1
+            - drop <player.location.forward[0.5]> <script[geode_data].data_key[<player.item_in_hand.script.name>.drops].random.if_null[air]> quantity:1
+            - take item:HC_Geode quantity:1
 
 geode_data:
     type: data
     HC_Geode:
-        common:
-        - flint
+        drops:
+        - flint 2
         - iron_nugget
         - gold_nugget
         - coal
         - air
-        uncommon:
         - amethyst_shard
         - raw_copper
-        rare:
         - raw_iron
         - raw_gold
         - HC_Fossil
