@@ -27,7 +27,7 @@ HC_cooking_pot_script:
                 - if <player.gamemode> != creative:
                     - take iteminhand quantity:1
                 - stop
-            - if <context.location.block.campfire_items.contains_all_text[HC_menu_cooking_pot_model]> and <context.location.switched>:
+            - if <context.location.block.campfire_items.contains_all_text[HC_menu_cooking_pot_model]> and <context.location.switched> and !<player.is_sneaking>:
                 - determine passively cancelled
                 - inventory open d:HC_cooking_pot_menu
                 - flag <player> openmenulocation:<context.location>
@@ -57,6 +57,7 @@ HC_cooking_pot_script:
         on player clicks HC_menu_* in HC_cooking_pot_menu:
             - determine cancelled
 
+            
 
 HC_cooking_pot_script_cooking_logic:
     type: task
