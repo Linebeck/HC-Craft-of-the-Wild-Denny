@@ -136,7 +136,7 @@ HC_Geode_script:
             - ratelimit <player> 2t
             - give <context.player> <script[geode_data].data_key[<player.item_in_hand.script.name>.drops].random.if_null[air]> quantity:1
             - take item:HC_Geode quantity:1
-            - playsound at<context.location> sound:BLOCK_POINTED_DRIPSTONE_LAND pitch:2 volume:.75
+            - playsound at:<context.location> sound:BLOCK_POINTED_DRIPSTONE_LAND pitch:2 volume:.75
 
 geode_data:
     type: data
