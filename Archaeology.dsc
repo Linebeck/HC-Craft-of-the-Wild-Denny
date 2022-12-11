@@ -132,11 +132,16 @@ HC_Geode_script:
     type: world
     debug: false
     events:
-        on player right clicks block:
-            - if <player.item_in_hand.script.name.if_null[null]> == HC_Geode*:
-                - ratelimit <player> 2t
-                - narrate hello
-                - drop <player.location.forward[0.5]> <script[geode_data].data_key[<player.item_in_hand.script.name>.common].random.if_null[air]>
+        on player right clicks block with:HC_Geode:
+
+            - if <util.random_chance[100]>:
+                            - drop <context.location.center> <script[geode_data].data_key[common].random.if_null[air]> speed:0
+                            - stop
+
+            - ratelimit <player> 2t
+            - take item:HC_Geode quantity:1
+            - playsound at:<player.location> sound:BLOCK_POINTED_DRIPSTONE_LAND pitch:2 volume:.5
+            - drop <context.player> <script[geode_data].data_key[<player.item_in_hand.script.name>.drops].random.if_null[air]> quantity:1
 
 geode_data:
     type: data
@@ -146,10 +151,14 @@ geode_data:
         - iron_nugget
         - gold_nugget
         - coal
-        - HC_Fossil
-        uncommon:
+        - air
         - amethyst_shard
         - raw_copper
-        rare:
         - raw_iron
         - raw_gold
+        - HC_Fossil
+        - air
+        - experience_bottle
+        - name_tag
+        - air
+        - air
