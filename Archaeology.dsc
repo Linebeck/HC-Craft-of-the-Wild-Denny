@@ -46,7 +46,6 @@ archaeology_data:
     dirt:
         common:
         - clay_ball
-        - hc_geode
         - wheat_seeds
         - sugar_cane
         - beetroot_seeds
@@ -57,6 +56,7 @@ archaeology_data:
         veryrare:
         - potato
         - hc_fossil
+        - HC_Geode
         ultrarare:
         - gunpowder
         legendary:
@@ -79,6 +79,7 @@ archaeology_data:
         veryrare:
         - raw_iron
         - experience_bottle
+        - HC_Geode
         ultrarare:
         - emerald
         - clock
@@ -102,6 +103,7 @@ archaeology_data:
         veryrare:
         - gold_nugget
         - spyglass
+        - HC_Geode
         ultrarare:
         - diamond
         - skeleton_skull
@@ -125,6 +127,7 @@ archaeology_data:
         very rare:
         - wither_rose
         - golden_sword
+        - HC_Geode
         ultrarare:
         - wither_skeleton_skull
         legendary:
@@ -135,6 +138,11 @@ HC_Geode_script:
     type: world
     debug: false
     events:
+        on player breaks stone:
+            - if <util.random_chance[100]>:
+                - drop HC_Geode
+            - else:
+                - stop
         on player right clicks block with:HC_Geode:
             - if <util.random_chance[.1]>:
                 - give <context.player> <script[geode_data].data_key[legendary].random.if_null[air]> speed:0
