@@ -132,11 +132,11 @@ HC_Geode_script:
     type: world
     debug: false
     events:
-        on player right clicks block:
+        on player right clicks block with:HC_Geode:
             - ratelimit <player> 2t
             - drop <player.location.forward[0.5]> <script[geode_data].data_key[<player.item_in_hand.script.name>.drops].random.if_null[air]> quantity:1
             - take item:HC_Geode quantity:1
-            - playsound <context.location> sound:BLOCK_POINTED_DRIPSTONE_LAND pitch:1.5
+            - playsound <context.location> sound:BLOCK_POINTED_DRIPSTONE_LAND pitch:2 volume:.75
 
 geode_data:
     type: data
