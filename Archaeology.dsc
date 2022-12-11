@@ -162,6 +162,7 @@ HC_Geode_script:
             - drop xp quantity: 2
             - playsound at:<context.player> BLOCK_POINTED_DRIPSTONE_LAND pitch:1.5
             - take item:HC_Geode quantity:1
+            - wait 1t
             - if <util.random_chance[.1]>:
                 - give <context.player> <script[geode_data].data_key[legendary].random.if_null[air]> speed:0
                 - stop
