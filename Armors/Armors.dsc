@@ -15,7 +15,7 @@ barbarianhelm_script:
                 - if <context.final_damage> > <player.weapon_damage>:
                     - determine passively <context.final_damage.mul[1.05]>
                     - stop
-                - determine passively <context.final_damage.mul[1.10]>
+                - determine passively <context.final_damage.mul[1.15]>
 
 HC_barbarianlegwraps:
     type: item
@@ -34,7 +34,7 @@ barbarianlegwraps_script:
                 - if <context.final_damage> > <player.weapon_damage>:
                     - determine passively <context.final_damage.mul[1.05]>
                     - stop
-                - determine passively <context.final_damage.mul[1.10]>
+                - determine passively <context.final_damage.mul[1.15]>
 
 HC_barbarianarmor:
     type: item
@@ -53,14 +53,4 @@ barbarianarmor_script:
                 - if <context.final_damage> > <player.weapon_damage>:
                     - determine passively <context.final_damage.mul[1.05]>
                     - stop
-                - determine passively <context.final_damage.mul[1.10]>
-
-HC_barbarianarmowr:
-    type: item
-    debug: false
-    data:
-        discover: false
-    flags:
-        TempMod: -200
-    material: chainmail_chestplate
-    display name: <reset><&color[#BFA92B]>Barbarian Armor
+                - determine passively <context.final_damage.mul[1.20]>
