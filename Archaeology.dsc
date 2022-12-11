@@ -133,6 +133,11 @@ HC_Geode_script:
     debug: false
     events:
         on player right clicks block with:HC_Geode:
+
+            - if <util.random_chance[100]>:
+                            - drop <context.location.center> <script[geode_data].data_key[common].random.if_null[air]> speed:0
+                            - stop
+
             - ratelimit <player> 2t
             - take item:HC_Geode quantity:1
             - playsound at:<player.location> sound:BLOCK_POINTED_DRIPSTONE_LAND pitch:2 volume:.5
@@ -141,7 +146,7 @@ HC_Geode_script:
 geode_data:
     type: data
     HC_Geode:
-        drops:
+        common:
         - flint
         - iron_nugget
         - gold_nugget
