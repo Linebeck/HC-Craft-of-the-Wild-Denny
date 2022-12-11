@@ -160,7 +160,7 @@ HC_Geode_script:
                 - stop
         on player right clicks block with:HC_Geode:
             - drop xp quantity: 2
-            - playsound at:<context.player> BLOCK_POINTED_DRIPSTONE_LAND pitch:1.5
+            - playsound at:<player.location> BLOCK_POINTED_DRIPSTONE_LAND pitch:1.5
             - take item:HC_Geode quantity:1
             - wait 1t
             - if <util.random_chance[.1]>:
