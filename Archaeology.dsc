@@ -140,7 +140,7 @@ HC_Geode_script:
     events:
         on player breaks stone:
             - if <util.random_chance[100]>:
-                - drop HC_Geode <context.block>
+                - determine HC_Geode
             - else:
                 - stop
         on player right clicks block with:HC_Geode:
