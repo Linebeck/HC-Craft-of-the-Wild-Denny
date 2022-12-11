@@ -133,7 +133,6 @@ HC_Geode_script:
     debug: false
     events:
         on player right clicks block with:HC_Geode:
-
             - if <util.random_chance[100]>:
                             - give <context.player> <script[geode_data].data_key[common].random.if_null[air]> speed:0
                             - stop
