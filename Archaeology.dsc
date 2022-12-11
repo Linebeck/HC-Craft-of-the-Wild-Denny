@@ -46,6 +46,7 @@ archaeology_data:
     dirt:
         common:
         - clay_ball
+        - hc_geode
         - wheat_seeds
         - sugar_cane
         - beetroot_seeds
@@ -80,6 +81,7 @@ archaeology_data:
         - experience_bottle
         ultrarare:
         - emerald
+        - clock
         legendary:
         - silverfish_spawn_egg
         - spider_spawn_egg
@@ -99,6 +101,7 @@ archaeology_data:
         - nautilus
         veryrare:
         - gold_nugget
+        - spyglass
         ultrarare:
         - diamond
         - skeleton_skull
@@ -133,6 +136,21 @@ HC_Geode_script:
     debug: false
     events:
         on player right clicks block with:HC_Geode:
+            - if <util.random_chance[.05]>:
+                - give <context.player> <script[geode_data].data_key[legendary].random.if_null[air]> speed:0
+                - stop
+            - if <util.random_chance[2.5]>:
+                - give <context.player> <script[geode_data].data_key[ultrarare].random.if_null[air]> speed:0
+                - stop
+            - if <util.random_chance[15]>:
+                - give <context.player> <script[geode_data].data_key[veryrare].random.if_null[air]> speed:0
+                - stop
+            - if <util.random_chance[30]>:
+                - give <context.player> <script[geode_data].data_key[rare].random.if_null[air]> speed:0
+                - stop
+            - if <util.random_chance[40]>:
+                - give <context.player> <script[geode_data].data_key[uncommon].random.if_null[air]> speed:0
+                - stop
             - if <util.random_chance[100]>:
                 - give <context.player> <script[geode_data].data_key[common].random.if_null[air]> speed:0
                 - stop
@@ -140,17 +158,26 @@ geode_data:
     type: data
     common:
     - flint
+    - air
+    - coal
+    uncommon:
+    - amethyst_shard
+    - HC_Fossil
+    - raw_copper
+    rare:
+    - name_tag
     - iron_nugget
     - gold_nugget
-    - coal
-    - air
-    - amethyst_shard
-    - raw_copper
+    veryrare:
     - raw_iron
     - raw_gold
-    - HC_Fossil
-    - air
+    - HC_Diamond_Shard
+    ultrarare:
+    - diamond
     - experience_bottle
-    - name_tag
-    - air
-    - air
+    - bucket
+    legendary:
+    - netherite_scrap
+    - raw_iron_block
+    - raw_gold_block
+    - nether_star
