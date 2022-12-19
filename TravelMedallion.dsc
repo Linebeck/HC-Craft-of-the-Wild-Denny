@@ -19,6 +19,7 @@ HC_TravelMedallion_Script:
                 - inventory flag slot:hand medallionlocation:<context.location.above[1]>
                 - stop
             - if <player.item_in_hand.has_flag[medallionlocation]> and !<player.is_sneaking>:
+                - ratelimit <player> 1s
                 - if <player.item_in_hand.flag[medallionlocation].is_spawnable>:
                     - teleport <player> <player.item_in_hand.flag[medallionlocation]>
                 - else:
