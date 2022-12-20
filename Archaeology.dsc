@@ -186,7 +186,7 @@ geode_data:
     type: data
     common:
     - flint
-    - air
+    - null
     - coal
     uncommon:
     - amethyst_shard
