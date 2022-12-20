@@ -159,6 +159,7 @@ HC_Geode_script:
             - else:
                 - stop
         on player right clicks block with:HC_Geode:
+            - ratelimit <player> 2t
             - drop xp quantity: 2
             - playsound at:<player.location> BLOCK_POINTED_DRIPSTONE_LAND pitch:1.5
             - take item:HC_Geode quantity:1
