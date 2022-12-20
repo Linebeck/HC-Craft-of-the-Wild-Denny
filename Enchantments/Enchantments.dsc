@@ -122,4 +122,4 @@ HC_enchantment_draining_script:
    events:
       on player damages entity:
       - if <player.item_in_hand.enchantment_types.contains_text[draining]>:
-         - heal <player> <context.final_damage.mul[.5]>
+         - heal <player> <context.final_damage.mul[.1]>
