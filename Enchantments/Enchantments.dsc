@@ -121,5 +121,5 @@ HC_enchantment_draining_script:
    debug: false
    events:
       on player damages entity:
-      - if <context.entity=![armor_stand]> and <player.item_in_hand.enchantment_types.contains_text[draining]>:
+      - if <context.entity[armor_stand]> and <player.item_in_hand.enchantment_types.contains_text[draining]>:
          - heal <player> <context.final_damage.mul[.1]>
