@@ -122,5 +122,4 @@ HC_enchantment_draining_script:
    events:
       on player damages entity:
       - if <player.item_in_hand.enchantment_types.contains_text[draining]>:
-         - ratelimit <player> 3s
-         - heal <player> <context.damage>
+         - heal <player> <context.damage>/10
