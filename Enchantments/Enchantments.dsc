@@ -122,4 +122,4 @@ HC_enchantment_draining_script:
    events:
       on player damages entity:
       - ratelimit <player> 3s
-      - heal <context.player> <context.damage>
+      - health heal <context.player> <context.damage>
