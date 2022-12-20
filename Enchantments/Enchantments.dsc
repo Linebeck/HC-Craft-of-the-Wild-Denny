@@ -121,5 +121,6 @@ HC_enchantment_draining_script:
    debug: false
    events:
       on player damages entity:
-      - ratelimit <player> 3s
-      - heal player
+      - if <player.item_in_hand.enchantment_types.contains_text[venom]>:
+         - ratelimit <player> 3s
+         - heal player
