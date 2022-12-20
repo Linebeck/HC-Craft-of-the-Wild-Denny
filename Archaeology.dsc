@@ -165,22 +165,22 @@ HC_Geode_script:
             - take item:HC_Geode quantity:1
             - wait 1t
             - if <util.random_chance[.1]>:
-                - give <script[geode_data].data_key[legendary].random.if_null[air]> speed:0
+                - give <script[geode_data].data_key[legendary].random.if_null[air]>
                 - stop
             - if <util.random_chance[2.5]>:
-                - give <script[geode_data].data_key[ultrarare].random.if_null[air]> speed:0
+                - give <script[geode_data].data_key[ultrarare].random.if_null[air]>
                 - stop
             - if <util.random_chance[15]>:
-                - give <script[geode_data].data_key[veryrare].random.if_null[air]> speed:0
+                - give <script[geode_data].data_key[veryrare].random.if_null[air]>
                 - stop
             - if <util.random_chance[30]>:
-                - give <script[geode_data].data_key[rare].random.if_null[air]> speed:0
+                - give <script[geode_data].data_key[rare].random.if_null[air]>
                 - stop
             - if <util.random_chance[40]>:
-                - give <script[geode_data].data_key[uncommon].random.if_null[air]> speed:0
+                - give <script[geode_data].data_key[uncommon].random.if_null[air]>
                 - stop
             - if <util.random_chance[100]>:
-                - give <script[geode_data].data_key[common].random.if_null[air]> speed:0
+                - give <script[geode_data].data_key[common].random.if_null[air]>
                 - stop
 geode_data:
     type: data
