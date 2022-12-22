@@ -99,3 +99,27 @@ HC_enchantment_venom_script:
           - if <util.random_chance[20]> and <player.item_in_hand.enchantment_types.contains_text[venom]>:
              - cast poison amplifier:2 duration:3 <context.entity> hide_particles
              - playsound <context.damager> sound:entity.drowned.hurt_water volume:1 pitch:2
+
+HC_enchantment_draining:
+   type: enchantment
+   id: draining
+   debug: false
+   slots:
+      - mainhand
+   rarity: rare
+   full_name: Draining
+   category: WEAPON
+   min_level: 1
+   max_level: 1
+   min_cost: 30
+   max_cost: 30
+   is_tradable: false
+   is_discoverable: false
+
+HC_enchantment_draining_script:
+   type: world
+   debug: false
+   events:
+      on player damages entity:
+      - if <context.entity[armor_stand]> and <player.item_in_hand.enchantment_types.contains_text[draining]>:
+         - heal <player> <context.final_damage.mul[.1]>

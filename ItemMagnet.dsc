@@ -13,7 +13,7 @@ ItemMagnet_script:
     type: world
     debug: false
     events:
-        on system time secondly every:4:
+        on system time secondly every:3:
             - foreach <server.online_players> as:player:
                 - if <[player].inventory.contains_item[HC_ItemMagnet]>:
                     - foreach <[player].location.find_entities.within[8]> as:item:

@@ -243,14 +243,14 @@ HC_Geode:
         discover: false
     mechanisms:
         custom_model_data: 2
-    display name: <reset><&color[#9C662F]>Geode
+    display name: <reset><gray>Geode
     lore:
-    - <reset><&6>Crack one open!
+    - <reset><&5>Crack one open!
 
 HC_Diamond_Shard:
     type: item
     debug: false
-    material: iron_nugget
+    material: prismarine_shard
     data:
         discover: false
     mechanisms:
