@@ -22,5 +22,5 @@ UnlitCampfires:
     debug: false
     events:
         on player places campfire|soul_campfire:
-            - if <player.item_in_hand.material.name.contains_text[campfire]> and <player.item_in_hand.script.name.if_null[<player.item_in_hand.material.name>]> != HC_cooking_pot_demo:
+            - if <player.gamemode> != creative:
                 - switch <context.location>
