@@ -22,8 +22,8 @@ HC_cooking_pot_script:
             - if <player.item_in_hand.script.name.if_null[<player.item_in_hand.material.name>]> == HC_cooking_pot_demo:
                 - flag <context.location.block> cooking_pot
         on player right clicks campfire:
+            - determine passively cancelled
             - ratelimit <player> 1t
-            - narrate test
             - if <player.item_in_hand.script.name.if_null[null]> == HC_cooking_pot:
                 - adjust <context.location> campfire_items:HC_menu_cooking_pot_model
                 - if <player.gamemode> != creative:
